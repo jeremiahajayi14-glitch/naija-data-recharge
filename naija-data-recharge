@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Choose your mobile network and data plan with Naija Data Recharge.">
+  <title>Naija Data Recharge | Buy Data</title>
+
+  <style>
+    :root {
+      --green: #087f5b;
+      --dark: #10251e;
+      --muted: #66736d;
+      --background: #f4f8f5;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--background);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e3ebe5;
+    }
+
+    nav {
+      max-width: 1100px;
+      width: 92%;
+      margin: auto;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: var(--green);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 65px 20px 55px;
+      text-align: center;
+      background: linear-gradient(135deg, #e0f5e8, #f4f8f5);
+    }
+
+    .hero .tag {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.15;
+      margin: 15px auto;
+      max-width: 700px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 760px;
+      width: 92%;
+      margin: 35px auto 70px;
+    }
+
+    .panel {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e5ece7;
+      box-shadow: 0 12px 35px #153a2410;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: 21px;
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    input, select {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid #d7e1da;
+      background: white;
+      border-radius: 9px;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #8bd3b2;
+      border-color: var(--green);
+    }
+
+    .networks {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .network {
+      padding: 14px 4px;
+      border: 1px solid #dce6df;
+      background: white;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .network.active {
+      border: 2px solid var(--green);
+      background: #e9f8ef;
+      color: var(--green);
+    }
+
+    .hint {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: -10px;
+      margin-bottom: 18px;
+    }
+
+    .summary {
+      background: #f2f8f4;
+      padding: 17px;
+      border-radius: 10px;
+      margin: 5px 0 20px;
+    }
+
+    .summary div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 5px 0;
+    }
+
+    .summary strong {
+      text-align: right;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 50px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--green);
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #06694b;
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 13px;
+      text-align: center;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: white;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      .panel {
+        padding: 20px;
+      }
+
+      .networks {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="#">Naija<span>Data.</span></a>
+      <a href="#recharge">Buy Data</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tag">Stay connected</div>
+    <h1>Your data recharge, made simple.</h1>
+    <p>
+      Choose your network, select a data bundle, and review
+      your order in one convenient place.
+    </p>
+  </section>
+
+  <main id="recharge">
+    <section class="panel">
+      <h2>01. Choose your network</h2>
+
+      <div class="networks">
+        <button type="button" class="network active" data-network="MTN">MTN</button>
+        <button type="button" class="network" data-network="Airtel">Airtel</button>
+        <button type="button" class="network" data-network="Glo">Glo</button>
+        <button type="button" class="network" data-network="9mobile">9mobile</button>
+      </div>
+
+      <form id="orderForm">
+        <label for="phone">Phone number</label>
+        <input
+          id="phone"
+          type="tel"
+          inputmode="numeric"
+          placeholder="e.g. 08012345678"
+          autocomplete="tel"
+          required
+        >
+        <p class="hint">Enter the Nigerian number that should receive the data.</p>
+
+        <label for="plan">Select data bundle</label>
+        <select id="plan" required>
+          <option value="">Choose a plan</option>
+        </select>
+
+        <div class="summary">
+          <div><span>Network</span><strong id="summaryNetwork">MTN</strong></div>
+          <div><span>Data bundle</span><strong id="summaryPlan">Not selected</strong></div>
+          <div><span>Recipient</span><strong id="summaryPhone">Not entered</strong></div>
+          <div><span>Price</span><strong id="summaryPrice">₦0.00</strong></div>
+        </div>
+
+        <button type="submit" class="btn">Review My Order</button>
+        <p id="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="notice">
+        Demo only: prices and bundles are sample data, not live offers.
+        No payment is collected and no data is delivered.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Naija Data Recharge. All rights reserved.
+  </footer>
+
+  <script>
+    // SAMPLE PLANS ONLY. Replace with verified plans from your
+    // vending provider before accepting real orders.
+    const samplePlans = {
+      MTN: [
+        { label: "500 MB — 30 days", price: 500 },
+        { label: "1 GB — 30 days", price: 1000 },
+        { label: "2 GB — 30 days", price: 2000 }
+      ],
+      Airtel: [
+        { label: "500 MB — 30 days", price: 500 },
+        { label: "1 GB — 30 days", price: 1000 },
+        { label: "2 GB — 30 days", price: 2000 }
+      ],
+      Glo: [
+        { label: "500 MB — 30 days", price: 500 },
+        { label: "1 GB — 30 days", price: 1000 },
+        { label: "2 GB — 30 days", price: 2000 }
+      ],
+      "9mobile": [
+        { label: "500 MB — 30 days", price: 500 },
+        { label: "1 GB — 30 days", price: 1000 },
+        { label: "2 GB — 30 days", price: 2000 }
+      ]
+    };
+
+    let selectedNetwork = "MTN";
+
+    const planSelect = document.getElementById("plan");
+    const phoneInput = document.getElementById("phone");
+    const message = document.getElementById("message");
+
+    const naira = amount =>
+      new Intl.NumberFormat("en-NG", {
+        style: "currency",
+        currency: "NGN"
+      }).format(amount);
+
+    function populatePlans() {
+      planSelect.innerHTML = '<option value="">Choose a plan</option>';
+
+      samplePlans[selectedNetwork].forEach((plan, index) => {
+        const option = document.createElement("option");
+        option.value = String(index);
+        option.textContent = `${plan.label} — ${naira(plan.price)}`;
+        planSelect.appendChild(option);
+      });
+
+      document.getElementById("summaryNetwork").textContent =
+        selectedNetwork;
+
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const plan = planSelect.value === ""
+        ? null
+        : samplePlans[selectedNetwork][Number(planSelect.value)];
+
+      document.getElementById("summaryPlan").textContent =
+        plan ? plan.label : "Not selected";
+
+      document.getElementById("summaryPhone").textContent =
+        phoneInput.value.trim() || "Not entered";
+
+      document.getElementById("summaryPrice").textContent =
+        plan ? naira(plan.price) : naira(0);
+
+      message.textContent = "";
+    }
+
+    document.querySelectorAll(".network").forEach(button => {
+      button.addEventListener("click", () => {
+        selectedNetwork = button.dataset.network;
+
+        document.querySelectorAll(".network").forEach(item => {
+          item.classList.toggle("active", item === button);
+        });
+
+        populatePlans();
+      });
+    });
+
+    planSelect.addEventListener("change", updateSummary);
+    phoneInput.addEventListener("input", updateSummary);
+
+    document.getElementById("orderForm").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const phone = phoneInput.value.trim();
+      const plan = planSelect.value === ""
+        ? null
+        : samplePlans[selectedNetwork][Number(planSelect.value)];
+
+      if (!/^0[789][01]\d{8}$/.test(phone)) {
+        message.textContent =
+          "Please enter a valid 11-digit Nigerian mobile number.";
+        return;
+      }
+
+      if (!plan) {
+        message.textContent = "Please select a data bundle.";
+        return;
+      }
+
+      message.textContent =
+        `Demo order reviewed: ${plan.label} for ${phone}. ` +
+        `Total: ${naira(plan.price)}. No payment or recharge has occurred.`;
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    populatePlans();
+  </script>
+</body>
+</html>
